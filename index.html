@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="about me page">
+    <title>About Me</title>
+    <!-- Styles for this page -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top navigation bar -->
+    <nav class="navbar">
+        <p class="brand-title">Portfolio</p>
+        <div class="navbar-links">
+            <!-- Jump to each section below -->
+            <a href="#about-heading">About Me</a>
+            <a href="#skills-heading">Skills</a>
+            <a href="#contact">Contact Me</a>
+        </div>
+    </nav>
+    <main>
+        <!-- A quick introduction -->
+        <header class="intro">
+            <h1>Welcome to my portfolio</h1>
+            <p>Hello, I am Jovani</p>
+            <p>I am a CCE student at USJ.</p>
+        </header>
+
+        <section class="about">
+            <h2 id="about-heading">About Me</h2>
+            <!-- My profile photo -->
+            <img src="images/jovani.png" alt="A smiling man wearing a gray V-neck shirt">
+            <p>My name is Jovani Bou Khalil.</p>
+            <p>I'm currently learning to build web pages with HTML and CSS.</p>
+            <p>Welcome to my corner of the web.</p>
+        </section>
+
+        <section>
+            <h2 id="skills-heading">Skills</h2>
+            <p>I am currently developing these skills in my web development course:</p>
+            <!-- Skills I am working on -->
+            <ul>
+                <li>HTML: creating web pages.</li>
+                <li>CSS: styling web pages.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact me</h2>
+            <!-- This form is just for practice. It does not send messages yet. -->
+            <form>
+                <div>
+                    <!-- These fields need to be filled in before submitting -->
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email address</label>
+                    <!-- Check that the email has a valid format -->
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button>Submit</button>
+            </form>
+        </section>
+
+        <footer>
+            <!-- My email and GitHub links -->
+            <a href="mailto:boukhaliljovani@gmail.com">Email me</a>
+            <a href="https://github.com/JovaniBouKhalil" target="_blank" rel="noreferrer">My GitHub</a>
+        </footer>
+    </main>
+</body>
+</html>

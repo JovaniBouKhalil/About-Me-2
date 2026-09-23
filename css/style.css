@@ -1,0 +1,120 @@
+/* Basic page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222222;
+    /* A bit more space between lines */
+    line-height: 1.5;
+    padding: 20px;
+}
+
+/* Same color for both headings */
+h1, h2 {
+    color: #444444;
+}
+
+/* Space below the introduction */
+.intro {
+    margin-bottom: 30px;
+}
+
+/* Keep the title and links on opposite sides */
+.navbar {
+    background-color: #222222;
+    color: #ffffff;
+    display: flex;
+    /* Let the links wrap on smaller screens */
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid #444444;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.brand-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Space between the navigation links */
+.navbar-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* White links for the dark navbar */
+nav a {
+    color: #ffffff;
+}
+
+img {
+    width: 200px;
+    /* Keep the photo from overflowing */
+    max-width: 100%;
+}
+
+/* The About Me box */
+.about {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 3px solid #444444;
+    border-radius: 10px;
+}
+
+/* Space between sections */
+section {
+    margin-bottom: 30px;
+}
+
+/* Leave some room between form fields */
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 700;
+}
+
+/* Match the form font to the rest of the page */
+input, textarea, button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Full-width text fields */
+input, textarea {
+    width: 100%;
+    /* Keep padding and borders inside the width */
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+button {
+    background-color: #222222;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #444444;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #222222;
+    padding: 20px;
+    border: 3px solid #444444;
+    border-radius: 10px;
+}
+
+/* White links with some space between them */
+footer a {
+    color: #ffffff;
+    margin-right: 20px;
+}
