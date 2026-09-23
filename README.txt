@@ -1,11 +1,18 @@
-Personal Portfolio - Jovani Bou Khalil
+Responsive Portfolio - Jovani Bou Khalil
 
 Open index.html in a web browser to view the page.
 
-This project uses HTML and CSS and includes an introduction, an About Me
-section, my current skills, and a contact form.
+This multi-section landing page includes a hero, an About Me section, skill
+cards, a contact form, and a footer. It was designed mobile-first and uses:
+
+- CSS Grid for section layouts
+- Flexbox for content inside sections
+- A min-width media query for the desktop layout
+- CSS custom properties for five color roles and a spacing scale
+- Hover states with 200ms transitions
 
 The contact form is a demonstration. It checks required fields and the
 email format in the browser, but it does not send messages.
 
 The stylesheet is in css/style.css and the photo is in images/jovani.png.
+The screenshots folder contains mobile and desktop views for submission.
