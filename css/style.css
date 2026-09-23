@@ -18,6 +18,7 @@
 
 html { scroll-behavior: smooth; }
 
+/* Mobile styles are the default; larger-screen changes appear below. */
 body {
     margin: 0;
     background-color: var(--color-background);
@@ -49,6 +50,7 @@ h3 { margin-bottom: var(--space-xs); font-size: 1.35rem; }
 }
 
 .navbar {
+    /* Flexbox controls the items inside the navigation region. */
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
@@ -130,6 +132,7 @@ h3 { margin-bottom: var(--space-xs); font-size: 1.35rem; }
 .about div, .section-heading div, .contact-copy { max-width: 42rem; }
 
 .skill-list {
+    /* Grid provides the section layout while cards remain independent. */
     display: grid;
     gap: var(--space-sm);
     margin-top: var(--space-lg);
@@ -144,6 +147,7 @@ h3 { margin-bottom: var(--space-xs); font-size: 1.35rem; }
 .skill-card p:last-child { margin-bottom: 0; }
 
 .contact-form {
+    /* Form controls stack naturally on narrow screens. */
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
@@ -180,6 +184,7 @@ button { align-self: flex-start; }
 
 a, button, input, textarea, .skill-card { transition: 200ms ease; }
 
+/* Interactive elements share the same accent-colored hover feedback. */
 .navbar-links a:hover, .footer-links a:hover { color: var(--color-accent); }
 
 .brand-title:hover { background-color: var(--color-accent); }
@@ -200,7 +205,7 @@ input:focus, textarea:focus {
     outline-offset: 2px;
 }
 
-/* Add columns only when the content has enough room */
+/* Add columns only when the content has enough room. */
 @media (min-width: 48rem) {
     .navbar {
         flex-direction: row;
