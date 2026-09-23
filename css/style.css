@@ -1,120 +1,201 @@
-/* Basic page styles */
+:root {
+    /* Five color roles used throughout the page */
+    --color-background: #f4f1ea;
+    --color-surface: #ffffff;
+    --color-text: #17211d;
+    --color-accent: #cf5c36;
+    --color-border: #b8c4bd;
+
+    /* A consistent spacing scale */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+    --space-xl: 4rem;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #222222;
-    /* A bit more space between lines */
-    line-height: 1.5;
-    padding: 20px;
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-/* Same color for both headings */
-h1, h2 {
-    color: #444444;
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { line-height: 1.15; }
+
+h1 {
+    max-width: 12ch;
+    margin-bottom: var(--space-md);
+    font-size: clamp(2.5rem, 12vw, 4.5rem);
+    letter-spacing: -0.05em;
 }
 
-/* Space below the introduction */
-.intro {
-    margin-bottom: 30px;
+h2 { margin-bottom: var(--space-sm); font-size: 2rem; }
+h3 { margin-bottom: var(--space-xs); font-size: 1.35rem; }
+
+.navbar, main, .footer {
+    width: min(100% - 2rem, 70rem);
+    margin-inline: auto;
 }
 
-/* Keep the title and links on opposite sides */
 .navbar {
-    background-color: #222222;
-    color: #ffffff;
     display: flex;
-    /* Let the links wrap on smaller screens */
-    flex-wrap: wrap;
-    gap: 15px;
-    align-items: center;
-    justify-content: space-between;
-    border: 3px solid #444444;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding-block: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .brand-title {
-    font-size: 24px;
+    align-self: flex-start;
+    padding: var(--space-xs);
+    background-color: var(--color-text);
+    color: var(--color-surface);
+    font-size: 1.1rem;
     font-weight: 700;
-    margin: 0;
+    line-height: 1;
+    text-decoration: none;
 }
 
-/* Space between the navigation links */
-.navbar-links {
+.navbar-links, .footer-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: var(--space-md);
 }
 
-/* White links for the dark navbar */
-nav a {
-    color: #ffffff;
-}
-
-img {
-    width: 200px;
-    /* Keep the photo from overflowing */
-    max-width: 100%;
-}
-
-/* The About Me box */
-.about {
-    background-color: #ffffff;
-    padding: 20px;
-    border: 3px solid #444444;
-    border-radius: 10px;
-}
-
-/* Space between sections */
-section {
-    margin-bottom: 30px;
-}
-
-/* Leave some room between form fields */
-form div {
-    margin-bottom: 15px;
-}
-
-label {
+.navbar-links a, .footer-links a {
     font-weight: 700;
+    text-underline-offset: 0.3em;
 }
 
-/* Match the form font to the rest of the page */
-input, textarea, button {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+.page-section {
+    padding-block: var(--space-xl);
+    border-bottom: 1px solid var(--color-border);
 }
 
-/* Full-width text fields */
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.eyebrow, .section-number, .skill-index {
+    color: var(--color-accent);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.intro-text {
+    max-width: 34rem;
+    margin-bottom: var(--space-md);
+    font-size: 1.15rem;
+}
+
+.button-link, button {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    border: 2px solid var(--color-text);
+    background-color: var(--color-text);
+    color: var(--color-surface);
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--color-border);
+    object-fit: cover;
+}
+
+.about, .section-heading, .contact {
+    display: grid;
+    gap: var(--space-sm);
+}
+
+.about div, .section-heading div, .contact-copy { max-width: 42rem; }
+
+.skill-list {
+    display: grid;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+}
+
+.skill-card {
+    padding: var(--space-md);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+}
+
+.skill-card p:last-child { margin-bottom: 0; }
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.contact-form div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+label { font-weight: 700; }
+
 input, textarea {
     width: 100%;
-    /* Keep padding and borders inside the width */
-    box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid #444444;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #222222;
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font: inherit;
 }
 
-button {
-    background-color: #222222;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid #444444;
-    border-radius: 5px;
+textarea { min-height: 8rem; resize: vertical; }
+button { align-self: flex-start; }
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding-block: var(--space-lg);
 }
 
-footer {
-    background-color: #222222;
-    padding: 20px;
-    border: 3px solid #444444;
-    border-radius: 10px;
+.footer p { margin-bottom: 0; }
+
+a, button, input, textarea, .skill-card { transition: 200ms ease; }
+
+.navbar-links a:hover, .footer-links a:hover { color: var(--color-accent); }
+
+.brand-title:hover { background-color: var(--color-accent); }
+
+.button-link:hover, button:hover {
+    border-color: var(--color-accent);
+    background-color: var(--color-accent);
 }
 
-/* White links with some space between them */
-footer a {
-    color: #ffffff;
-    margin-right: 20px;
+.skill-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-0.25rem);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--color-accent);
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
 }
