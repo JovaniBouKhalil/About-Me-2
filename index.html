@@ -2,53 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="about me page">
-    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The personal portfolio of CCE student Jovani Bou Khalil">
+    <title>Jovani Bou Khalil | Portfolio</title>
     <!-- Styles for this page -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Top navigation bar -->
     <nav class="navbar">
-        <p class="brand-title">Portfolio</p>
+        <a class="brand-title" href="#top">JBK</a>
         <div class="navbar-links">
             <!-- Jump to each section below -->
-            <a href="#about-heading">About Me</a>
-            <a href="#skills-heading">Skills</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#contact">Contact Me</a>
         </div>
     </nav>
-    <main>
+    <main id="top">
         <!-- A quick introduction -->
-        <header class="intro">
-            <h1>Welcome to my portfolio</h1>
-            <p>Hello, I am Jovani</p>
-            <p>I am a CCE student at USJ.</p>
+        <header class="intro page-section">
+            <div class="intro-content">
+                <p class="eyebrow">Hello, I am Jovani</p>
+                <h1>CCE student learning to build for the web.</h1>
+                <p class="intro-text">I enjoy turning ideas into clear, useful pages with HTML and CSS.</p>
+                <a class="button-link" href="#about">Discover my work</a>
+            </div>
+            <img class="profile-photo" src="images/jovani.png" alt="Jovani Bou Khalil smiling at the camera">
         </header>
 
-        <section class="about">
-            <h2 id="about-heading">About Me</h2>
-            <!-- My profile photo -->
-            <img src="images/jovani.png" alt="A smiling man wearing a gray V-neck shirt">
-            <p>My name is Jovani Bou Khalil.</p>
-            <p>I'm currently learning to build web pages with HTML and CSS.</p>
-            <p>Welcome to my corner of the web.</p>
+        <section class="about page-section" id="about">
+            <p class="section-number">01</p>
+            <div>
+                <h2>About Me</h2>
+                <p>My name is Jovani Bou Khalil. I am a Computer and Communications Engineering student at USJ.</p>
+                <p>I am currently learning how thoughtful structure and responsive design can make websites work well on every screen.</p>
+            </div>
         </section>
 
-        <section>
-            <h2 id="skills-heading">Skills</h2>
-            <p>I am currently developing these skills in my web development course:</p>
-            <!-- Skills I am working on -->
-            <ul>
-                <li>HTML: creating web pages.</li>
-                <li>CSS: styling web pages.</li>
-            </ul>
+        <section class="skills page-section" id="skills">
+            <div class="section-heading">
+                <p class="section-number">02</p>
+                <div>
+                    <h2>My Skills</h2>
+                    <p>What I am developing through my engineering studies and web programming course.</p>
+                </div>
+            </div>
+            <div class="skill-list">
+                <article class="skill-card">
+                    <p class="skill-index">01</p>
+                    <h3>HTML</h3>
+                    <p>Building accessible pages with meaningful, well-organized content.</p>
+                </article>
+                <article class="skill-card">
+                    <p class="skill-index">02</p>
+                    <h3>CSS</h3>
+                    <p>Creating responsive layouts with Grid, Flexbox, and media queries.</p>
+                </article>
+                <article class="skill-card">
+                    <p class="skill-index">03</p>
+                    <h3>Engineering</h3>
+                    <p>Applying technical thinking and problem solving to new challenges.</p>
+                </article>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact me</h2>
-            <!-- This form is just for practice. It does not send messages yet. -->
-            <form>
+        <section class="contact page-section" id="contact">
+            <div class="contact-copy">
+                <p class="section-number">03</p>
+                <h2>Let's connect</h2>
+                <p>Have a question or want to say hello? Leave a message below.</p>
+            </div>
+            <form class="contact-form">
                 <div>
                     <!-- These fields need to be filled in before submitting -->
                     <label for="name">Full name</label>
@@ -63,15 +88,17 @@
                     <label for="message">Message</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-                <button>Submit</button>
+                <button type="submit">Send message</button>
             </form>
         </section>
 
-        <footer>
-            <!-- My email and GitHub links -->
-            <a href="mailto:boukhaliljovani@gmail.com">Email me</a>
-            <a href="https://github.com/JovaniBouKhalil" target="_blank" rel="noreferrer">My GitHub</a>
-        </footer>
     </main>
+    <footer class="footer">
+        <p>Designed and built by Jovani Bou Khalil.</p>
+        <div class="footer-links">
+            <a href="mailto:boukhaliljovani@gmail.com">Email</a>
+            <a href="https://github.com/JovaniBouKhalil" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+    </footer>
 </body>
 </html>
